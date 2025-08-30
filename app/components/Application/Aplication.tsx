@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
+import HeroSection from "../HeroComponent /Hero";
  
 
 
@@ -31,6 +32,7 @@ const Application = () => {
       return (
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
           <Navigation theme={theme} toggleTheme={toggleTheme} />
+          <HeroSection/>
         </div>
       )
  
