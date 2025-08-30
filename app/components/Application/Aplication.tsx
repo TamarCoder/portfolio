@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import HeroSection from "../HeroComponent /Hero";
+import SkillsSection from "../Skills/Skils";
  
 
 
@@ -33,6 +34,7 @@ const Application = () => {
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
           <Navigation theme={theme} toggleTheme={toggleTheme} />
           <HeroSection/>
+          <SkillsSection/>
         </div>
       )
  
