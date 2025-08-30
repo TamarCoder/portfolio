@@ -5,6 +5,7 @@ import HeroSection from "../HeroComponent /Hero";
 import SkillsSection from "../Skills/Skils";
 import ProjectsSection from "../Projects/ProjectsSection";
 import ContactSection from "../Contact/ContactSection";
+import Footer from "../Footer/FooterSection";
  
 
 
@@ -39,6 +40,7 @@ const Application = () => {
           <SkillsSection/>
           <ProjectsSection/>
           <ContactSection/>
+          <Footer/>
         </div>
       )
  
