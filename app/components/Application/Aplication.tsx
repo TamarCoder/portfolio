@@ -4,6 +4,7 @@ import Navigation from "../Navigation/Navigation";
 import HeroSection from "../HeroComponent /Hero";
 import SkillsSection from "../Skills/Skils";
 import ProjectsSection from "../Projects/ProjectsSection";
+import ContactSection from "../Contact/ContactSection";
  
 
 
@@ -37,6 +38,7 @@ const Application = () => {
           <HeroSection/>
           <SkillsSection/>
           <ProjectsSection/>
+          <ContactSection/>
         </div>
       )
  
