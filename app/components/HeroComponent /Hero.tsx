@@ -60,7 +60,7 @@ const HeroSection = () => {
                 <span className="text-blue-400">developer</span> = {'{'}
                 {'\n'}
                 {'  '}<span className="text-green-400">name</span>:{' '}
-                <span className="text-yellow-300">'Your Name'</span>,
+                <span className="text-yellow-300">'Tamar'</span>,
                 {'\n'}
                 {'  '}<span className="text-green-400">skills</span>: [
                 {'\n'}
