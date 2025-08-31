@@ -19,12 +19,7 @@ const Application = () => {
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
+  
 
   if (!mounted) {
     return null;
@@ -32,7 +27,7 @@ const Application = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-all duration-300">
-      <Navigation theme={theme} toggleTheme={toggleTheme} />
+      <Navigation theme={theme}  />
       <HeroSection />
       <SkillsSection />
       <ProjectsSection />
