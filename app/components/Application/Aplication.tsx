@@ -9,13 +9,13 @@ import Footer from "../Footer/FooterSection";
 import HeroSection from "../HeroComponent /Hero";
 
 const Application = () => {
-  const [theme, setTheme] = useState('light');
+   
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
+     
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
@@ -27,7 +27,7 @@ const Application = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground transition-all duration-300">
-      <Navigation theme={theme}  />
+      <Navigation   />
       <HeroSection />
       <SkillsSection />
       <ProjectsSection />
