@@ -1,51 +1,45 @@
 "use client"
 import { useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
-import HeroSection from "../HeroComponent /Hero";
+ 
 import SkillsSection from "../Skills/Skils";
 import ProjectsSection from "../Projects/ProjectsSection";
 import ContactSection from "../Contact/ContactSection";
 import Footer from "../Footer/FooterSection";
- 
-
-
-
-
+import HeroSection from "../HeroComponent /Hero";
 
 const Application = () => {
+  const [theme, setTheme] = useState('light');
+  const [mounted, setMounted] = useState(false);
 
-
-   const [theme, setTheme] = useState('light');
-    useEffect(() => {
+  useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
   }, []);
-  
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
+  if (!mounted) {
+    return null;
+  }
 
-      return (
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-          <Navigation theme={theme} toggleTheme={toggleTheme} />
-          <HeroSection/>
-          <SkillsSection/>
-          <ProjectsSection/>
-          <ContactSection/>
-          <Footer/>
-        </div>
-      )
- 
-
+  return (
+    <div className="min-h-screen bg-background text-foreground transition-all duration-300">
+      <Navigation theme={theme} toggleTheme={toggleTheme} />
+      <HeroSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  );
 }
-
 
 export default Application;
