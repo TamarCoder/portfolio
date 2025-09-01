@@ -14,10 +14,10 @@ const ProjectsSection = () => {
       title: "E-Commerce Platform",
       description:
         "description",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["React", "TypeScript" ,"Node.js",  "Tailwind", "Yup"],
       gradient: "from-blue-500 to-purple-600",
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "http://localhost:3002/",
+      githubLink: "https://github.com/TamarCoder/EcommerceApp",
     },
     {
       icon: <BarChart3 className="w-12 h-12" />,
