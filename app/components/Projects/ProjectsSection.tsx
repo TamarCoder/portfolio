@@ -1,10 +1,10 @@
 import {
-  ArrowRight,
-  BarChart3,
-  ExternalLink,
-  Github,
-  MessageSquare,
-  ShoppingBag,
+    ArrowRight,
+    BarChart3,
+    ExternalLink,
+    Github, ListTodo,
+    MessageSquare,
+    ShoppingBag,
 } from "lucide-react";
 
 const ProjectsSection = () => {
@@ -13,25 +13,25 @@ const ProjectsSection = () => {
       icon: <ShoppingBag className="w-12 h-12" />,
       title: "E-Commerce Platform",
       description:
-        "description",
-      technologies: ["React", "TypeScript" ,"Node.js",  "Tailwind", "Yup"],
+        "E-commerce page built with React, TypeScript, Tailwind,  Zustand  and Yup. Features search, filtering, and simulated checkout",
+      technologies: ["React", "TypeScript" ,"Node.js",  "Tailwind", "Yup", 'Zustand'],
       gradient: "from-blue-500 to-purple-600",
-      demoLink: "http://localhost:3002/",
+      demoLink: "",
       githubLink: "https://github.com/TamarCoder/EcommerceApp",
     },
     {
       icon: <BarChart3 className="w-12 h-12" />,
       title: "Analytics Dashboard",
       description:
-        " description",
-      technologies: ["Vue.js", "D3.js", "Chart.js", "WebSocket"],
+        " Modern Analytics Dashboard with React, TypeScript, and Tailwind CSS. Features responsive dark theme with animations.",
+      technologies: ["React", "TypeScript", "Tailwind", ],
       gradient: "from-pink-500 to-rose-600",
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/TamarCoder/Analytics-Dashboard",
     },
     {
-      icon: <MessageSquare className="w-12 h-12" />,
-      title: "Social Media App",
+      icon: <ListTodo  className="w-12 h-12" />,
+      title: "Todo List Application",
       description:
         "description",
       technologies: ["React Native", "Firebase", "Redux", "Socket.io"],
