@@ -21,7 +21,7 @@ const SkillsSection = () => {
       skills: [
         "Git & GitHub",
         "Axios",
-        "REST API",
+          "Zustand"
       ],
     },
   ];
