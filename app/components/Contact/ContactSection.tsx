@@ -1,140 +1,127 @@
 "use client";
-import { Mail, Send, User } from "lucide-react";
-import { useState } from "react";
+import { Code, Coffee, MapPin, Calendar } from "lucide-react";
 
-const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+const AboutSection = () => {
+    return (
+        <section id="about" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+            <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+              About Me
+            </span>
+                    </h2>
+                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                        Get to know more about me and my journey
+                    </p>
+                </div>
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
+                <div className="grid lg:grid-cols-2 gap-8 items-start">
+                    {/* Photo Section */}
+                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+                        <div className="relative">
+                            <div className="aspect-square bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-2xl overflow-hidden">
+                                {/* Placeholder for photo - replace with your actual image */}
+                                <img
+                                    src="/api/placeholder/400/400"
+                                    alt="Profile"
+                                    className="w-full h-full object-cover"
+                                />
+                                {/* If no image yet, show placeholder */}
+                                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20">
+                                    <div className="text-center">
+                                        <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                            <Code className="w-10 h-10 text-white" />
+                                        </div>
+                                        <p className="text-gray-600 dark:text-gray-400">Your Photo Here</p>
+                                    </div>
+                                </div>
+                            </div>
 
-  const handleChange = (e: any) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+                            {/* Floating elements around photo */}
+                            <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-700 rounded-full p-3 shadow-lg">
+                                <Coffee className="w-6 h-6 text-indigo-600" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-700 rounded-full p-3 shadow-lg">
+                                <Code className="w-6 h-6 text-purple-600" />
+                            </div>
+                        </div>
+                    </div>
 
-  const handleSubmit = async () => {
-    if (!formData.name || !formData.email || !formData.message) {
-      setSubmitMessage('Please fill all feald');
-      setTimeout(() => setSubmitMessage(''), 3000);
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-   
-    setTimeout(() => {
-      setSubmitMessage('thank you , your message send');
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-      
-      setTimeout(() => setSubmitMessage(''), 5000);
-    }, 1500);
-  };
+                    {/* Info Section */}
+                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+                        <div className="space-y-6">
 
-  return (
-    <section id="contact" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-  <div className="max-w-3xl mx-auto">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-          Contact me
-        </span>
-      </h2>
-      <p className="text-lg text-gray-600 dark:text-gray-400">
-        I am ready for new projects and collaborations
-      </p>
-    </div>
+                            {/* Main Info */}
+                            <div>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                                    Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Your Tamar</span>
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    I'm a passionate developer with experience in building modern web applications.
+                                    I love creating clean, efficient code and turning ideas into reality through technology.
+                                </p>
+                            </div>
 
-    {/* Form Container - NO <form> tag! */}
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-      <div className="space-y-6">
-        
- 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Name
-          </label>
-          <div className="relative">
-            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-200"
-              placeholder="Your Name"
-            />
-          </div>
-        </div>
+                            {/* Quick Info Cards */}
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                    <div className="flex items-center space-x-2 mb-2">
+                                        <MapPin className="w-4 h-4 text-indigo-600" />
+                                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Location</span>
+                                    </div>
+                                    <p className="text-gray-900 dark:text-white">Tbilisi, Georgia</p>
+                                </div>
 
-       
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Email
-          </label>
-          <div className="relative">
-            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-200"
-              placeholder="your.email@example.com"
-            />
-          </div>
-        </div>
+                                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                    <div className="flex items-center space-x-2 mb-2">
+                                        <Calendar className="w-4 h-4 text-purple-600" />
+                                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Experience</span>
+                                    </div>
+                                    <p className="text-gray-900 dark:text-white">3+ Years</p>
+                                </div>
+                            </div>
 
-         
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Message
-          </label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-             
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-200"
-            placeholder=" Write your message...."
-          />
-        </div>
+                            {/* Skills or Technologies */}
+                            <div>
+                                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                                    Technologies I work with
+                                </h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {['React', 'Next.js', 'TypeScript', 'Node.js', 'Javascript', 'Zustand', 'React Form', 'Yup'].map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/30 dark:to-purple-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium"
+                                        >
+                      {tech}
+                    </span>
+                                    ))}
+                                </div>
+                            </div>
 
-        {/* Status Message */}
-        {submitMessage && (
-          <div className="p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-300 rounded-lg">
-            {submitMessage}
-          </div>
-        )}
+                            {/* Additional Info */}
+                            <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    My diverse background in operations and healthcare economics gives me a unique advantage
+                                    in understanding both technical and business needs. I approach every project with a strategic
+                                    mindset, always aiming for efficiency and user satisfaction.
+                                </p>
+                            </div>
 
-   
-        <button
-          onClick={handleSubmit}   
-          disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isSubmitting ? (
-            <span> Sending...</span>
-          ) : (
-            <>
-               Send
-              <Send className="ml-2 w-5 h-5" />
-            </>
-          )}
-        </button>
-        
-      </div>
-    </div>   
-  </div>
-</section>
-  );
+                            {/* CTA Button */}
+                            <button className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                                Download Resume
+                                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };
 
-export default ContactSection;
+export default AboutSection;

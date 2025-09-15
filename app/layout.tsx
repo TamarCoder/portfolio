@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portfolio - Frontend Developer",
   description: "Professional portfolio website",
+
+    icons: {
+        icon: "/favicon.ico",
+        other: [{ rel: "icon", url: "/cover.svg", type: "image/svg+xml" }],
+    },
 };
 
 export default function RootLayout({

@@ -14,9 +14,9 @@ const ProjectsSection = () => {
       title: "E-Commerce Platform",
       description:
         "E-commerce page built with React, TypeScript, Tailwind,  Zustand  and Yup. Features search, filtering, and simulated checkout",
-      technologies: ["React", "TypeScript" ,"Node.js",  "Tailwind", "Yup", 'Zustand'],
+      technologies: ["React", "TypeScript" ,"Node.js",  "Tailwind", "Lucide React", "Yup", 'Zustand'],
       gradient: "from-blue-500 to-purple-600",
-      demoLink: "",
+      demoLink: "https://main.d19cnu2jqlon6l.amplifyapp.com/",
       githubLink: "https://github.com/TamarCoder/EcommerceApp",
     },
     {
@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       title: "Analytics Dashboard",
       description:
         " Modern Analytics Dashboard with React, TypeScript, and Tailwind CSS. Features responsive dark theme with animations.",
-      technologies: ["React", "TypeScript", "Tailwind", ],
+      technologies: ["React", "TypeScript", "Tailwind", "Lucide React" ],
       gradient: "from-pink-500 to-rose-600",
       demoLink: "#",
       githubLink: "https://github.com/TamarCoder/Analytics-Dashboard",
@@ -33,8 +33,9 @@ const ProjectsSection = () => {
       icon: <ListTodo  className="w-12 h-12" />,
       title: "Todo List Application",
       description:
-        "description",
-      technologies: ["React Native", "Firebase", "Redux", "Socket.io"],
+        "Create, edit, complete, and delete tasks with rich details",
+      technologies: ["React", "TypeScript", "Tailwind", "Lucide React", "Gradient Backgrounds ","Zustand",
+      "Ant Design", ],
       gradient: "from-yellow-500 to-orange-600",
       demoLink: "#",
       githubLink: "#",
