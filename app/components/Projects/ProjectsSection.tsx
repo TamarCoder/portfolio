@@ -37,8 +37,8 @@ const ProjectsSection = () => {
       technologies: ["React", "TypeScript", "Tailwind", "Lucide React", "Gradient Backgrounds ","Zustand",
       "Ant Design", ],
       gradient: "from-yellow-500 to-orange-600",
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://main.dqmslwbl1hzzb.amplifyapp.com/",
+      githubLink: "https://github.com/TamarCoder/ToDo-App-",
     },
   ];
 
