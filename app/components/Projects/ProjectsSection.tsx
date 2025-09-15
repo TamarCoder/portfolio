@@ -16,7 +16,7 @@ const ProjectsSection = () => {
         "E-commerce page built with React, TypeScript, Tailwind,  Zustand  and Yup. Features search, filtering, and simulated checkout",
       technologies: ["React", "TypeScript" ,"Node.js",  "Tailwind", "Lucide React", "Yup", 'Zustand'],
       gradient: "from-blue-500 to-purple-600",
-      demoLink: "https://main.d19cnu2jqlon6l.amplifyapp.com/",
+      demoLink: "https://main.d1f0w5nxjyz8mn.amplifyapp.com/",
       githubLink: "https://github.com/TamarCoder/EcommerceApp",
     },
     {
