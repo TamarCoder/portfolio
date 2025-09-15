@@ -26,7 +26,7 @@ const ProjectsSection = () => {
         " Modern Analytics Dashboard with React, TypeScript, and Tailwind CSS. Features responsive dark theme with animations.",
       technologies: ["React", "TypeScript", "Tailwind", "Lucide React" ],
       gradient: "from-pink-500 to-rose-600",
-      demoLink: "#",
+      demoLink: "https://main.d3dg9l789ktxpo.amplifyapp.com/",
       githubLink: "https://github.com/TamarCoder/Analytics-Dashboard",
     },
     {
