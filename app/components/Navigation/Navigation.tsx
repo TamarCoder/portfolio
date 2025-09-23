@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Github, Linkedin, Twitter, Mail, ExternalLink, Menu, X, ArrowRight, Code, Palette, Zap, ShoppingBag, BarChart3, MessageSquare, Send, User, ChevronRight, Layers, Terminal, Briefcase } from 'lucide-react';
+import Image from 'next/image';
+import {Github, Linkedin, Twitter,  Menu, X,} from 'lucide-react';
 
  
 const Navigation = ({ theme, toggleTheme } : any) => {
@@ -31,7 +32,13 @@ const Navigation = ({ theme, toggleTheme } : any) => {
           {/* Logo */}
           <div className="flex items-center ">
             <span className=" font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
-                <img src="/cover.svg" alt="" className='w-[100px] h-[150px] cursor-pointer'/>
+                <Image 
+                  src="/cover.svg" 
+                  alt="Logo" 
+                  width={100} 
+                  height={150} 
+                  className='cursor-pointer'
+                />
             </span>
               <span className="text-[15px] font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
                  Tamar Khsuskivadze

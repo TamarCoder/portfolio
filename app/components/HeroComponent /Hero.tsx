@@ -60,22 +60,22 @@ const HeroSection = () => {
                 <span className="text-blue-400">developer</span> = {'{'}
                 {'\n'}
                 {'  '}<span className="text-green-400">name</span>:{' '}
-                <span className="text-yellow-300">'Tamar'</span>,
+                <span className="text-yellow-300">Tamar</span>,
                 {'\n'}
                 {'  '}<span className="text-green-400">skills</span>: [
                 {'\n'}
-                {'    '}<span className="text-yellow-300">'React'</span>,
+                {'    '}<span className="text-yellow-300">React</span>,
                 {'\n'}
-                {'    '}<span className="text-yellow-300">'TypeScript'</span>,
+                {'    '}<span className="text-yellow-300">TypeScript</span>,
                 {'\n'}
-                {'    '}<span className="text-yellow-300">'Tailwind CSS'</span>,
+                {'    '}<span className="text-yellow-300">Tailwind CSS</span>,
                 {'\n'}
-                {'    '}<span className="text-yellow-300">'Next.js'</span>
+                {'    '}<span className="text-yellow-300">Next.js</span>
                 {'\n'}
                 {'  '}],
                 {'\n'}
                 {'  '}<span className="text-green-400">passion</span>:{' '}
-                <span className="text-yellow-300">'Building amazing UIs'</span>
+                <span className="text-yellow-300">Building amazing UIs</span>
                 {'\n'}
                 {'}'};
               </code>

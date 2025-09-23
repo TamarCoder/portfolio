@@ -3,7 +3,6 @@ import {
     BarChart3,
     ExternalLink,
     Github, ListTodo,
-    MessageSquare,
     ShoppingBag,
 } from "lucide-react";
 

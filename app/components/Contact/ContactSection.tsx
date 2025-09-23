@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Code, Coffee, MapPin, Calendar } from "lucide-react";
 
 const AboutSection = () => {
@@ -22,9 +23,11 @@ const AboutSection = () => {
                         <div className="relative">
                             <div className="aspect-square bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-2xl overflow-hidden">
                                 {/* Placeholder for photo - replace with your actual image */}
-                                <img
+                                <Image
                                     src="/api/placeholder/400/400"
                                     alt="Profile"
+                                    width={400}
+                                    height={400}
                                     className="w-full h-full object-cover"
                                 />
                                 {/* If no image yet, show placeholder */}
@@ -55,10 +58,10 @@ const AboutSection = () => {
                             {/* Main Info */}
                             <div>
                                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                                    Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Your Tamar</span>
+                                    Hi, I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Your Tamar</span>
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    I'm a passionate developer with experience in building modern web applications.
+                                    I am a passionate developer with experience in building modern web applications.
                                     I love creating clean, efficient code and turning ideas into reality through technology.
                                 </p>
                             </div>
